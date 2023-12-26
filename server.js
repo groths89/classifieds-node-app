@@ -35,11 +35,6 @@ const serveFile = async (filePath, contentType, response) => {
     }
 }
 
-options = {
-    pfx: fs.readFileSync("ssl/crt.pfx"),
-    passphrase: "password"
-};
-
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method);
     logEmitter.emit('log', `${req.url}\t${req.method}`, 'requestLog.txt');
