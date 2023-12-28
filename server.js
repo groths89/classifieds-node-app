@@ -10,7 +10,7 @@ class Emitter extends EventEmitter { };
 // initialize object and emittting the log
 const logEmitter = new Emitter();
 logEmitter.on('log', (msg, fileName) => logEvents(msg, fileName));
-const PORT = process.env.PORT || 3500;
+const PORT = process.env.PORT || 80;
 
 const serveFile = async (filePath, contentType, response) => {
     try {
