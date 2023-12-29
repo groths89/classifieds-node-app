@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "build": "npm run build:css",
-    "build:css": "npx tailwindcss-cli@latest build ./src/styles/tailwind.css -o ./src/styles/index.css",
-    "build:prod": "NODE_ENV=production npx tailwindcss-cli@latest build ./src/styles/tailwind.css -o ./build/styles/index.css",
+    "build:css": "npx tailwindcss-cli@latest build -i ./src/styles/tailwind.css -o ./src/styles/index.css",
+    "build:prod": "npx tailwindcss-cli@latest build -i ./src/styles/tailwind.css -o ./build/styles/index.css",
     "dev:node": "node --watch-path=./src server.js",
     "dev": "nodemon server.js",
     "test": "jest"
